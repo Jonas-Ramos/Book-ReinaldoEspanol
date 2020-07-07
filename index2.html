@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO R.E.</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css?family=Red+Hat+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+    <a href="#menu"><span class="nav" id="nav" onclick="colorNav()"> </span></a>
+
+    <span class="nav_desktop"  id="nav_desktop" onclick="colorNavD()"; onclick="changeText()"; > 
+        <div class="nav__menu" id="nav_menu" onclick="colorText(); changeText();" onclick="containerZ()">
+            <div class="nav__menu__text">
+                <a id="changeText"> MENU </a>
+            </div>
+            <div class="nav_translate" id="nav_translate" onclick="colorTextt()" >
+                <a>FR</a>
+                <a>ES</a>
+            </div>
+        </div>
+    </span>
+
+    
+    <section class="container_hero" id="container_hero">
+        <div class="button_slides_contain">
+            <span class="button_slides"></span>
+            <span class="button_slides"></span>
+            <span class="button_slides"></span>
+            <span class="button_slides"></span>
+            <span class="button_slides"></span>
+            <span class="button_slides"></span>
+            <span class="button_slides"></span>
+        </div>
+        <!-- <span class="nav2"  id="nav2"  onclick="colorNav();"></span> -->
+        <div class="hero" id="hero" data-anchor="slide1">
+            <div class="hero__text">
+                <p class="hero__text-title">REINALDO ESPANOL</p>
+                <p class="hero__text-subtitle">Designer of objects and strategies</p> 
+            </div>
+            <div class="hero__text-center">
+                <p>Le design est un être vivant <br> qui évolue avec le temps<br> dans un espace de plus en plus <br> Hétérogène</p> 
+            </div>
+        </div>
+        <div class="hero__description" id="hero__description" >
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean commodo ligula eget dolor. Aenean commodo ligula eget dolor.</p>
+        <div class="container-arrow">
+            <div class="sqrt"></div>
+            <div class="arrow"></div>
+        </div>
+        </div>
+    </section>
+
+    <section class="menu" id="menu" data-anchor="slide2">
+        <div class="submenu menu" id="submenu"> 
+            <ul class="list" id="list">
+                <li><a class="list_text" href="#about">À PROPOS
+                </a></li>
+                <li><a class="list_text" href="#branding" ">Branding</a></li>
+                <li><a class="list_text" href="#product" onclick="productPlay()";>DESIGN PRODUIT                </a></li>
+                <li><a class="list_text" href="#saints" > Web Design </a></li>
+                <li><a class="list_text" href="#da" >DA</a></li>
+                <li><a class="list_text" href="#motion" >Motion</a></li>
+            </ul>
+        </div>    
+        <div class="translate" id="translate">
+            <h2>FR</h2>
+            <h2>ES</h2>
+        </div>
+    </section>
+    <section id="about">
+        <header class="header_fixed">
+            <ul>
+                <li><a class="header_fixed-item" href="#about" id="about">À propos
+                </a></li>
+                <li><a class="header_fixed-item" href="#branding" id="coquet">Design produit</a></li>
+                <li><a class="header_fixed-item" href="#product" id="product" onclick="productPlay()";>Branding</a></li>
+                <li><a class="header_fixed-item" href="#saints" id="web">Web design</a></li>
+                <li><a class="header_fixed-item" href="#da" id="art">DA</a></li>
+                <li><a class="header_fixed-item" href="#motion" id="motion">Motion</a></li>
+            </ul>
+        </header>
+        <div class="about_container">
+          <div class="about_title">
+              <span style="color: #A6A6A6;">BOGOTA / COLOMBIA</span>
+              <span>REINALDO ESPANOL</span>
+          </div>
+          <div class="about_img">
+
+          </div>
+          <div class="about_img_text"><img src="/images/gps-img.jpg" alt=""> Lorem, ipsum.</div>
+          <div class="text-center">
+              <p>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled 
+                </p>
+                <p>
+                  it to make a type specimen book. It has survived not only five centuries
+              </p>
+          </div>
+          <div class="about_skills">
+              <div class="about_skills-item"><p>
+                Prix design Lorem Ipsum is simply dummy 
+                Lorem Ipsum 
+              </p></div>
+              <div class="about_skills-item">
+                  <p>Expositions</p>
+                  <p>Lorem Ipsum is simply dummy </p>
+                </div>
+              <div class="about_skills-item">
+                  <span><img src="https://img.icons8.com/material-outlined/24/000000/instagram-new.png"/></span>
+                  <span><img src="https://img.icons8.com/ios-glyphs/30/000000/linkedin-circled.png"/></span>
+              </div>
+          </div>
+          <div class="about_langues">
+            <p>Langues <br>Français
+                <br>Anglais
+                <br>Espagnol
+                 </p>
+          </div>
+        </div>
+    </section>
+    <script src="js/app.js"></script>
+</body>

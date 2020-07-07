@@ -1,0 +1,212 @@
+@media only screen and (max-width: 767px) {
+    /* .nav_desktop{
+        display: none;
+   } */
+   .hero__description{
+    padding: 0px 50px;
+    }
+    .hero__description p{
+        font-size: 14px;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) {
+    /* .nav{
+        display: none;
+    } */
+    .translate{
+        display: none;
+    }
+    .nav_desktop{
+        width: 54%;
+        height: 25px;
+        background-color: white;
+        position: fixed;
+        right: 3%;
+        top: 5%;
+        /* cursor: pointer; */
+        z-index: 10000000;   
+        overflow: hidden;
+        transition: 1s cubic-bezier(0.18, 0.89, 0.32, 1.28); 
+        display: none;
+    }
+    .product_nav_desktop{
+        width: 0%;
+        height: 25px;
+        background-color: black;
+        position: fixed;
+        right: 3%;
+        top: 5%;
+        cursor: pointer;
+        z-index: 10000000;   
+        overflow: hidden;
+        transition: 1s cubic-bezier(0.18, 0.89, 0.32, 1.28); 
+        
+        
+    }
+
+    .navIn{
+        animation-name: navIn; 
+        animation-delay: 3.5s;
+        animation-duration: .5s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+        -webkit-animation-name: navIn; 
+        -webkit-animation-delay: 3.5s;
+        -webkit-animation-duration: .5s;
+        -webkit-animation-timing-function: ease;
+        -webkit-animation-fill-mode: forwards;
+    }
+    @keyframes navIn{
+        0% {
+            width: 0;
+        } 
+        100%{
+            width: 54%;
+        } 
+    }
+
+    /* @keyframes navOut{
+        0% {
+            width: 54%;
+        } 
+        100%{
+            width: 0%;
+        } 
+    } */
+
+    .nav_desktop:hover{
+        transform: scaleY(1.05);
+    }
+
+
+    .nav__menu {
+        position: relative;
+        opacity: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: inherit;
+        position: relative;
+        padding: 0 5px;
+        transition: .2s ease-out;
+        left: 10px;
+        overflow: hidden;
+        align-items: center;
+    }
+    .product_nav_menu {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: inherit;
+        position: relative;
+        /* padding: 0 5px; */
+        transition: .2s ease-out;
+        left: 5px;
+        opacity: 1;
+        overflow: hidden;
+        align-items: center;
+    }
+    .nav__menu:hover{
+        opacity: 1;
+        left: 0px;
+    }
+    .nav__menu-text{
+        opacity: 1;
+        font-size: 14px;
+        position: relative;
+        transition: .2s;
+        
+    }
+        
+    .nav__menu__text a {
+        font-size: 14px;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .nav__menu__text a:hover {
+        color: #b8b8b8;
+    }
+    .product_nav__menu__text a{
+        font-size: 12px;
+        color: white;
+    }
+    .product_nav__menu__text {
+        width: 80%;
+        display: flex;
+        justify-content: inherit;
+        align-items: center;
+        text-align: center;
+        margin-left: 4px;
+        opacity: 0;
+        animation: textIn .2s ease 4.2s forwards;
+        -webkit-animation: textIn .2s ease 4.1s forwards;
+    }
+    @keyframes textIn {
+        0% {
+            opacity: 0;
+        }
+        100%
+        {
+            opacity: 1;
+        }
+    }
+    
+    
+    .product_nav_translate a{
+        font-size: 12px;
+        color: white;
+    }
+
+    .product_nav_translate a:hover{
+        color: #b8b8b8;
+    }
+
+    .nav_translate a{
+        font-size: 14px;
+    }
+
+    .nav_translate a:hover{
+        color: #b8b8b8;
+    }
+
+    .product_nav__menu__text li:focus{
+        color: lightgray;
+    }
+
+    .nav_translate, .product_nav_translate {
+        position: absolute;
+        right: 1em;
+        display: flex;
+    }
+    .nav_translate a, .product_nav_translate a{
+        padding: 0 10px;
+        
+    }
+    .list_text {
+        font-size: 50px;
+        transition: .2s ease-in-out;
+    }
+    .list_text:hover {
+        opacity: .6;
+        transform: scale(1.1);
+    }
+
+    /* .list_text:focus, a:active{
+        color: grey;
+    }
+
+    .list_text:active{
+        color: black;
+    }
+    */
+    .list_text.foco{
+        opacity: .6;
+    } 
+    .hero__description{
+        padding: 0 20%;
+    }
+    
+}
