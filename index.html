@@ -67,7 +67,7 @@
         </div>
     </section>
     <section id="about" class="vertical-scrolling" data-anchor="apropos">
-        <header class="header_fixed">
+        <header class="header_fixed" id="headerVue">
             <ul>
                 <li><a class="header_fixed-item" href="#about"">À propos
                 </a></li>
@@ -84,7 +84,7 @@
               <span class="subtitle">REINALDO ESPANOL</span>
           </div>
           <div class="about_img">
-
+            <img class="img-left" src="/RES PRUEBAS/images/foto.jpg" alt="">
           </div>
           <div class="about_img_text"><img src="/RES PRUEBAS/images/gps-img.jpg" alt=""> <p style="display: inline; font-style: italic; font-size: 14px;"> Paris, France<p></div>
           <div class="text-center">
@@ -135,7 +135,7 @@
             <div class="column-a">
                 <div class="product-card">
                     <div class="product_img" id="product1">
-                        <img class="img-right" src="../RES PRUEBAS/images/Img4.jpg" alt="">
+                        <img class="img-up" src="../RES PRUEBAS/images/Img4.jpg" alt="">
                     </div>
                     <div class="product_img-legend">
                         <p>Hermes packaging I Paris, France</p>
@@ -146,7 +146,7 @@
                 
                 <div class="product-card">
                     <div class="producto_img" id="product2">
-                        <img class="img-left" src="images/img-5.jpg" alt="">
+                        <img class="img-down" src="images/img-5.jpg" alt="">
                     </div>
                     <div class="product_img-legend">
                         <p>Hermes packaging I Paris, France</p>
@@ -159,7 +159,7 @@
             <div class="column-a">
                 <div class="product-card">
                     <div class="product_img" id="product3">
-                        <img class="img-right" src="images/Img-8.jpg" alt="">
+                        <img class="img-up" src="images/Img-8.jpg" alt="">
                     </div>
                     <div class="product_img-legend">
                         <p>Hermes packaging I Paris, France</p>
@@ -169,7 +169,7 @@
                 </div> 
                 <div class="product-card">
                     <div class="product_img" id="product4">
-                        <img class="img-right" src="images/Img 9.jpg" alt="">
+                        <img class="img-down" src="images/Img 9.jpg" alt="">
                     </div>
                     <div class="product_img-legend">
                         <p>Hermes packaging I Paris, France</p>
@@ -179,7 +179,7 @@
                 </div> 
                 <div class="product-card">
                     <div class="product_img" id="product5">
-                        <img class="img-left" src="images/flatlooking.jpg" alt="">
+                        <img class="img-up" src="images/flatlooking.jpg" alt="">
                     </div>
                     <div class="product_img-legend">
                         <p>Hermes packaging I Paris, France</p>
@@ -202,7 +202,7 @@
             <div class="column-a">
                 <div class="product-card">
                     <div class="product_img" id="product6">
-                        <img class="img-right" src="../RES PRUEBAS/images/img1.jpg" alt="">
+                        <img class="img-left" src="../RES PRUEBAS/images/img1.jpg" alt="">
                     </div>
                     <div class="product_img-legend">
                         <p>Hermes packaging I Paris, France</p>
@@ -253,58 +253,87 @@
                 <span class="subtitle">Web Design</span>
             </div> 
             <div class="column-b">
-                <img class="img-left" src="images/Img-6.jpg" alt="">
+                <img class="img-up" src="images/Img-6.jpg" alt="">
                 <span>Cristal & Bronze web site I Paris, France</span>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                 </p>
             </div>
             <div class="column-b">
-                <img class="img-right" src="images/Img-7.jpg" alt="">
+                <img class="img-down" src="images/Img-7.jpg" alt="">
                 <span>Cristal & Bronze web site I Paris, France</span>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                 </p>
             </div>
             <div class="column-b">
-                <img class="img-left" src="images/Img-6.jpg" alt="">
+                <img class="img-up" src="images/Img-6.jpg" alt="">
                 <span>Cristal & Bronze web site I Paris, France</span>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                <p id="veuprub">{{ message }}
                 </p>
             </div>
         </div>
+    </section>
+    <section id="art-dir">
+        <div class="art-dir_container">
+            <div class="section_title">
+                <span class="subtitle">ART DIRECTION</span>
+            </div> 
+            <div class="art-dir_img">
+                <img src="" alt="">
+                <p id="veu-1">{{ message }}
+            </div>
+          </div>
 
     </section>
     <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
 <script>
-let image = document.getElementsByClassName('img-right');
-new simpleParallax(image, {
+var app = new Vue({
+  el: '#veuprub',
+  data: {
+    message:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+  }
+})
+
+let r = ""
+
+var app = new Vue({
+  el: '#veu-1',
+  data: {
+    message: `"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged" + \ "Contrary to popular belief, Lorem Ipsum is not simply random text.  It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 'de Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 'Lorem ipsum dolor sit amet..', comes from a line in section '1.10.32'"`
+  }
+})
+
+
+let right = document.getElementsByClassName('img-right');
+new simpleParallax(right, {
 	orientation: 'right',
-    delay: .2,
-	// transition: 'cubic-bezier(0,0,0,1)'
-    maxTransition: 99
+    delay: 1,
+	transition: 'cubic-bezier(0,0,0,1)',
+    maxTransition: 50
 });
-let images = document.getElementsByClassName('img-left');
-new simpleParallax(images, {
+let left = document.getElementsByClassName('img-left');
+new simpleParallax(left, {
 	orientation: 'left',
-    // delay: .2,
-	// transition: 'cubic-bezier(0,0,0,1)'
-    maxTransition: 99
+    delay: 1,
+	transition: 'cubic-bezier(0,0,0,1)',
+    maxTransition: 50
 });
-let imagess = document.getElementsByClassName('img-up');
-new simpleParallax(imagess, {
+let up = document.getElementsByClassName('img-up');
+new simpleParallax(up, {
 	orientation: 'up',
-    // delay: .2,
-	// transition: 'cubic-bezier(0,0,0,1)'
-    maxTransition: 99
+    delay: 1,
+	transition: 'cubic-bezier(0,0,0,1)',
+    maxTransition: 20
 });
-let imagesss = document.getElementsByClassName('img-down');
-new simpleParallax(imagesss, {
+let down = document.getElementsByClassName('img-down');
+new simpleParallax(down, {
 	orientation: 'down',
-    // delay: .2,
-	// transition: 'cubic-bezier(0,0,0,1)'
-    maxTransition: 99
+    delay: 1,
+	transition: 'cubic-bezier(0,0,0,1)',
+    maxTransition: 20
 });
 
 /* $('#fullPage').fullpage({
