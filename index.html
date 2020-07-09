@@ -254,21 +254,24 @@
 <script>
 let image = document.getElementsByClassName('img-right');
 new simpleParallax(image, {
-	orientation: 'right',
+	orientation: 'down ',
     delay: .2,
-	transition: 'cubic-bezier(0,0,0,1)'
+	// transition: 'cubic-bezier(0,0,0,1)'
+    maxTransition: 99
 });
 let images = document.getElementsByClassName('img-left');
 new simpleParallax(images, {
-	orientation: 'left',
+	orientation: 'up',
     // delay: .2,
-	transition: 'cubic-bezier(0,0,0,1)'
+	// transition: 'cubic-bezier(0,0,0,1)'
+    maxTransition: 99
 });
 let imagess = document.getElementsByClassName('img-normal');
 new simpleParallax(imagess, {
-	// orientation: 'left',
+	orientation: 'down ',
     // delay: .2,
-	transition: 'cubic-bezier(0,0,0,1)'
+	// transition: 'cubic-bezier(0,0,0,1)'
+    maxTransition: 99
 });
 
 /* $('#fullPage').fullpage({

@@ -64,6 +64,8 @@ li{
 section{
     width: 100vw;
     height: auto;
+    padding-bottom: 50px;
+    /* border-bottom: 2px solid black; */
 }
 
 .container_hero.moveContainer{
