@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link href="https://fonts.googleapis.com/css?family=Red+Hat+Text&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.css" rel="stylesheet">
+
 </head>
 <body id="body">
-    <!-- NAV MOVIL -->
-    <span class="nav"  id="nav" onclick="colorNav()"> </span>
-    <!-- END NAV MOVIL -->
+    <!-- <a href="#menu"><span class="nav" id="nav"> </span></a> -->
     
-    <!-- NAV DESKTOP -->
-    <span class="nav_desktop"  id="nav_desktop" onclick="colorNavD()"; onclick="changeText()"; > 
-        <div class="nav__menu" id="nav_menu" onclick="colorText(); changeText();" onclick="containerZ()">
+    <a href="#menu"> <span class="nav_desktop"  id="nav_desktop"; >
+        <div class="nav__menu" id="nav_menu">
             <div class="nav__menu__text">
                 <a id="changeText"> MENU </a>
             </div>
@@ -25,104 +25,183 @@
                 <a>ES</a>
             </div>
         </div>
-    </span>
-    <!-- END NAV DESKTOP -->
+    </span> </a>
     
+    <div id="fullPage" class="scroll-container">
 
-    <div class="container_hero" id="container_hero">
-        <!-- <span class="nav2"  id="nav2"  onclick="colorNav();"></span> -->
-        <div class="hero" id="hero" data-anchor="slide1">
+    <section id="container_hero" class="container_hero" data-anchor="slide1">
+        <div class="hero" id="hero">
             <div class="hero__text">
-                <p class="hero__text-title">REINALDO ESPANOL</p>
-                <p class="hero__text-title">Le design est un être vivant <br> qui évolue avec le temps<br> dans un espace de plus en plus <br> Hétérogène</p>
-                <p class="hero__text-subtitle">Designer of objects and strategies</p>  
+                <p class="hero__text-title" style="font-weight: 300;">REINALDO <span style="font-weight: 500;"> ESPANOL</span></p>
+                <p class="hero__text-subtitle";>Design <span style="font-weight: 500;">&</span> Direction Artistique</p> 
+            </div>
+            <div class="hero__text-center">
+                <p><span style="font-weight: 500;">Le design</span> est un être vivant <br> qui <span style="font-weight: 500;">évolue</span> avec le temps<br> dans <span style="font-weight: 500;">un espace</span> de plus en plus <br> <span style="font-weight: 500;">Hétérogène</span></p> 
             </div>
         </div>
         <div class="hero__description" id="hero__description" >
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean commodo ligula eget dolor. Aenean commodo ligula eget dolor.</p>
+            <p>Designer avec plus de 10 ans d'experience qui a remporté plusieurs prix et reconnaissances
+                dans différents domaines du design tels que le mobilier design , le design d'espaces, le design transport 
+                et l'écoconception parmi autres.</p>
         <div class="container-arrow">
             <div class="sqrt"></div>
             <div class="arrow"></div>
         </div>
         </div>
-    </div>
+    </section>
 
-    <div class="product_nav_desktop"  id="product_nav_desktop"> 
-        
-    </div>
-
-    <div class="menu" id="menu" >
+    <section class="menu" id="menu" data-anchor="slide2">
         <div class="submenu menu" id="submenu"> 
             <ul class="list" id="list">
-                <li><a class="list_text" href="#about" id="about">About</a></li>
-                <li><a class="list_text" href="#product" id="product" onclick="productPlay()";>Product Design</a></li>
-                <li><a class="list_text" href="#coquet" id="coquet">Branding</a></li>
-                <li><a class="list_text" href="#dorado" id="art">Art Direction</a></li>
-                <li><a class="list_text" href="#saints" id="web"> Web Design </a></li>
-                <li><a class="list_text" href="#motion" id="motion">Motion</a></li>
+                <li data-menuanchor="apropos"><a class="list_text" href="#about">À PROPOS</a></li>
+                <li data-menuanchor="produit"><a class="list_text" href="#product">DESIGN PRODUIT</a></li>
+                <li data-menuanchor="branding"><a class="list_text" href="#branding" ">Branding</a></li>
+                <li data-menuanchor="WebDesign"><a class="list_text" href="#saints" > Web Design </a></li>
+                <li data-menuanchor="apropos"><a class="list_text" href="#da" >DA</a></li>
+                <li data-menuanchor="apropos"><a class="list_text" href="#motion">Motion</a></li>
             </ul>
         </div>    
         <div class="translate" id="translate">
             <h2>FR</h2>
             <h2>ES</h2>
         </div>
-    </div>
+    </section>
+    <section id="about" class="vertical-scrolling" data-anchor="apropos">
+        <header class="header_fixed">
+            <ul>
+                <li><a class="header_fixed-item" href="#about"">À propos
+                </a></li>
+                <li><a class="header_fixed-item" href="#product">Design produit</a></li>
+                <li><a class="header_fixed-item" href="#branding";>Branding</a></li>
+                <li><a class="header_fixed-item" href="#web-design">Web design</a></li>
+                <li><a class="header_fixed-item" href="#da" >DA</a></li>
+                <li><a class="header_fixed-item" href="#motion">Motion</a></li>
+            </ul>
+        </header>
+        <div class="about_container">
+        <div class="section_title">
+              <span class="title" >BOGOTA / COLOMBIA</span>
+              <span class="subtitle">REINALDO ESPANOL</span>
+          </div>
+          <div class="about_img">
 
-    <!-- PRODUCT SECTION -->
-
-    <div class="product_transition_container" id="animateTextIn">
-        <!-- <p class="product">PRODUCT DESIGN</p> -->
-        <p class="discover">DISCOVER</p>
-        <p class="idea">IDEA</p>
-        <p class="test">TEST</p>
-        <p class="define">DEFINE</p>
-        <p class="prototype">PROTOTYPE</p>
-    </div>
- </div>
-
-    <div class="grid_container" id="grid_container">
+          </div>
+          <div class="about_img_text"><img src="/images/gps-img.jpg" alt=""> <p style="display: inline; font-style: italic; font-size: 14px;"> Paris, France<p></div>
+          <div class="text-center">
+              <p>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled 
+                </p>
+                <p>
+                  it to make a type specimen book. It has survived not only five centuries
+              </p>
+          </div>
+          <div class="about_skills">
+              <div class="about_skills-item">
+                  <p>Prix design</p>
+                  <p>Riva 1920, Light up your idea /Mobilier Design / 2014 Milan, Italie
+                    Défi Aluminnov  / Éco-design / 2014 Paris, France
+                    Toyota Logistic Design Competition  / Design transport / 2014 Hanovrer, Allemagne
+                    International train design competition / Design transport / 2014  Qingdao, Chine
+                    Concours Design et industrie du futur  / Éco-design / 2014 Saint-Étienne, France
+                    Challenge Accessibilité avec Alstom   / Design Inclusif / 2014 Lyon, France
+                    </p>
+            </div>
+              <div class="about_skills-item">
+                  <p>Expositions</p>
+                  <p>Lorem Ipsum is simply dummy </p>
+                </div>
+                <div class="about_langues">
+                    <p>Langues <br>Français
+                        <br>Anglais
+                        <br>Espagnol
+                         </p>
+                  </div>
+              <div class="about_skills-social">
+                  <span><img src="https://img.icons8.com/material-outlined/24/000000/instagram-new.png"/></span>
+                  <span><img src="https://img.icons8.com/ios-glyphs/30/000000/linkedin-circled.png"/></span>
+              </div>
+          </div>
+        </div>
         
+    </section>
+    <section id="product" class="" data-anchor="slide3">
         
-        <div class="post_title">
-              <!-- <p class="post_title_text" style="font-weight: bold; font-size: 40px;">PRODUCT DESIGN</p> -->
-              <p class="post_title_text" style="font-weight: bold; font-size: 34px; color: lightgrey;">3DILLUSTRATION</p>
-         </div>
-             
-         <div class="post_content">
-             <div class="post_text">
-                 <div class="post_text--content">
-                     <h3>TRAM</h3>
-                         <p>
-                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt animi, voluptate provident rem, debitis ad doloribus aspernatur nostrum deleniti nisi omnis voluptatibus reprehenderit officia asperiores adipisci soluta quia at tempora. Nulla id nisi vel? Quis fugiat facilis earum? Fugit hic distinctio consequuntur reprehenderit id expedita accusantium magnam delectus numquam similique.</p>
-                 </div>
-                 <div class="info">
-                     <span>Crédits</span>
-                     <span><img src="images/gps-img.jpg"> Qingdao, China</span>
-                 </div>
-             </div>
-             
-             <div class="post_image">
-                 <div class="slideshow-container">
-                     <div class="mySlides fade active" style="display: block;">
-                         <img src="images/Tram-1.jpg" style="width:100%" alt="">
-                     </div>
-                     <div class="mySlides fade">
-                         <img src="images/Tram-3.jpg" style="width:100%" alt="">
-                     </div>
-                     <div class="post_image--dot">
-                         <span class="dot active" onclick="currentSlide(1)"></span> 
-                         <span class="dot" onclick="currentSlide(2)"></span> 
-                       </div>
-                 </div>
-             </div>
-         </div>
-         <div class="product_container-arrow">
-             <div class="sqrt"></div>
-             <div class="arrow"></div>
-         </div>
-         
-     <!-- END PRODUCT SECTION -->
-<script src="js/app.js"></script>
-       
+        <div class="product_container">
+            <div class="section_title">
+                <span class="subtitle">BRANDING</span>
+            </div> 
+
+            <div class="column-a">
+                <div class="product-card" id="product1">
+                    <div class="producto_img" >
+                    </div>
+                    <div class="product_img-legend">
+                        <p>Hermes packaging I Paris, France</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        </p>
+                    </div>
+                </div>          
+                
+                <div class="product-card">
+                    <div class="producto_img" id="product2">
+                    </div>
+                    <div class="product_img-legend">
+                        <p>Hermes packaging I Paris, France</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        </p>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="column-a">
+                <div class="product-card">
+                    <div class="producto_img" id="product3">
+                    </div>
+                    <div class="product_img-legend">
+                        <p>Hermes packaging I Paris, France</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        </p>
+                    </div>
+                </div> 
+                <div class="product-card">
+                    <div class="producto_img" id="product4">
+                    </div>
+                    <div class="product_img-legend">
+                        <p>Hermes packaging I Paris, France</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        </p>
+                    </div>
+                </div> 
+                <div class="product-card">
+                    <div class="producto_img" id="product5">
+                    </div>
+                    <div class="product_img-legend">
+                        <p>Hermes packaging I Paris, France</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        </p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </section>
+    <script src="js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
+<script>
+
+/* $('#fullPage').fullpage({
+    sectionSelector: '.vertical-scrolling',
+    slideSelector: '.horizontal-scrolling',
+    controlArrows: true,
+    navigation: true,
+    anchors: ['ReinaldoE', 'carte', 'apropos', 'produit', 'slide5'],
+    menu: '#menu'
+    more options here
+}); */
+
+
+</script>
+
 </body>
 </html>

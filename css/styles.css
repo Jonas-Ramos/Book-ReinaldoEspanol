@@ -14,16 +14,28 @@ font-family: 'Roboto', sans-serif;
     /* animation: Down .6s .9s ease-out both;
     transition: top .6s ease-out; */
 }
+html {
+    /* scroll-snap-points-y: repeat(100vh); */
+    scroll-snap-type: y mandatory; 
+    scroll-behavior: smooth;
+    will-change: contents;
+}
 
 body{
     font-family: 'Red Hat Text';
     overflow-x: hidden;
-    overflow-y: auto;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
 }
-
-
+/* .great-container{
+    scroll-snap-type: mandatory;
+    scroll-snap-type: y mandatory;
+}
+.section {
+    scroll-snap-align: start;
+    flex-flow: column;
+  } */
+.active {background-color: transparent!important;}
 h1{
     font-size: 28px;
 }
@@ -51,7 +63,7 @@ li{
 }
 section{
     width: 100vw;
-    height: 100vh;
+    height: auto;
 }
 
 .container_hero.moveContainer{
@@ -100,16 +112,21 @@ section{
 }
 
 .hero__text-title{
-    font-size: 37px;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
 }
 .hero__text-subtitle{
-    font-size: 16px;
+    font-size: 14px;
     text-align: right;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 .hero__text-center{
     color: white;
     text-align: center;
     font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
 }
 
 .hero__description{
@@ -130,6 +147,10 @@ section{
     -webkit-transition: 1s;
     will-change: transform;
 }
+.hero__description p{
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 16px;
+}
 
 /* .hero.moveHero{
     transform: translateY(-100vh);
@@ -149,13 +170,15 @@ section{
     justify-content: center;
 }
 
-.button_slides{
+.button_slides_contain a {
     width: 9px;
     height: 9px;
-    background-color: white;
+    background-color: rgb(88, 235, 3);
     border: .2px solid black;
     margin: 10px 0;
 }
+
+
 
 
 .container-arrow{
@@ -231,6 +254,27 @@ section{
         transform: translateY(0px);
     }
 }
+
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span {
+    background: white;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+}
+      
+#fp-nav ul li a.active span, 
+.fp-slidesNav ul li a.active span, 
+#fp-nav ul li:hover a.active span, 
+.fp-slidesNav ul li:hover a.active span {
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    background: transparent;
+    box-sizing: border-box;
+    border: 1px solid #24221F;
+}
+
 .nav{
     width: 45px;
     height: 45px;
@@ -257,7 +301,6 @@ section{
     overflow: hidden;
     will-change: contents;
     transition: .5s;
-    z-index: 10;
 }
 
 .submenu{    
@@ -274,10 +317,9 @@ section{
     left: 0;
     background-color: white;
     text-transform: uppercase;
-    z-index: 50;
     overflow: hidden;    
     transition: .2s .3s ease-out;
-    transform: translateX(100vw);
+    transform: translateX(0vw);
     -webkit-transition: .2s .3s ease-out;
     /* -webkit-transform: translateX(-100vw); */
     will-change: transform;
@@ -304,7 +346,7 @@ section{
 .list_text{
     text-decoration: none;
     color: black;
-    font-size: 35px;
+    font-size: 48px;
 }
 
 /* .list_text a:focus{
@@ -361,8 +403,12 @@ section{
     display: flex;
     justify-content: center;
     height: 15vh;
+    width: 100%;
     border-bottom: 1px solid lightgray;
-    position: static;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
 }
 
 .header_fixed ul{
@@ -375,90 +421,226 @@ section{
 .header_fixed ul li a{
     text-decoration: none;
     color: black;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .about_container {
     width: 100%;
     height: 85vh;
     display: grid;
-    grid-template-columns: 200px 252px repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    column-gap: 15px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    /* column-gap: 5px; */
+    font-family: 'Red Hat Text', sans-serif;
+    column-gap: 1em;
+    position: relative;
 }
 
-.about_title{
-    grid-row: 1 / 5;
+.section_title{
+    grid-row: 1 / 7;
     grid-column: 1 span;
     place-self: center;
     transform: rotateZ(-90deg);
 }
-.about_title span{
+/* .about_title .title{
     display: inline-block;
     width: 220px;
-}
+} */
 .about_img{
-    grid-row: 1 / 4;
+    grid-row: 2 / 6;
     grid-column: 2 / 3;
     background-image: url(../images/foto.jpg);
+    /* background-attachment: local; */
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position-x: left;
+    background-size: cover;
+    background-position-x: center;
 }
 .about_img_text{
-    grid-row: 4 / 5;
+    grid-row: 6 / 7;
     grid-column: 2 / 3;
-    padding-top: 10px;
+    margin-top: 10px;
 }
 .about_img_text img{
     width: 10px;
 }
+
+.section_title .title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #A6A6A6;
+    display: inline-block;
+    width: 220px;
+}
+.section_title .subtitle{
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.about_img_text p{
+    font-size: 12px;
+    font-family: 'Red Hat Text', sans-serif;
+}
 .text-center{
-    grid-row: 2 / 4;
+    grid-row: 4 / 6;
     grid-column: 3 / 4;
     place-self: flex-end;
-    padding: 0 20px;
 }
 .text-center p {
     padding: 10px 0;
     margin: 0;
+    font-size: 12px;
 }
 .about_skills{
-    grid-row: 2 / 4;
-    grid-column: 4 / 5;
-    justify-content: flex-start;
+        grid-row: 2 / 6;
+    grid-column: 4 / 6;
+    justify-content: space-around;
     display: flex;
     flex-direction: column;
 }
 .about_skills-item{
-    padding-bottom: 3em;
+    /* padding-bottom: 3em; */
 }
 .about_skills p{
-    /* padding: 10px; */
+    font-size: 12px;
 }
 .about_langues{
     grid-row: 2 / 3;
     grid-column: 5 / 6;
 }
 
-.product_transition_container{
+.product_container{
     width: 100%;
-    height: 100vh;
-    /* left: 5%; */
-    display: none;
-    z-index: 50;
-    position: absolute;
-    overflow: hidden;
-    flex-direction: column;
+    height: 85vh;
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr 200px;
+    grid-template-rows: repeat(12, 1fr);
+    font-family: 'Red Hat Text', sans-serif;
+    column-gap: .5em;
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: 1fr 50px 1fr;
-    grid-template-areas: 
-        "test idea prototype"
-        " define product prototype"
-        "define discover prototype"
-    ;
+
 }
+
+.column-a{
+    display: flex;
+    flex-direction: column;
+}
+
+.product_container .section_title {
+    grid-row: 1 / 10;
+    grid-column: 1 span;
+    place-self: center;
+    transform: rotateZ(-90deg);
+}
+
+/* .product-card{
+    grid-row: 1 / 6;
+    grid-column: 2 / 4
+} */
+.producto_img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    background-attachment: fixed;
+  }
+  
+ /* {
+    background-image: url(../images/Img4.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+} */
+
+#product1{
+    width: 550px;
+    height: 522px;
+    background-image: url('../images/Img-1.jpg');
+}
+
+#product2{
+    width: 547px;
+    height: 547px;
+    background-image: url('../images/img-5.jpg');
+}
+#product3{
+    width: 426px;
+    height: 270px;
+    background-image: url('../images/Img-8.jpg');
+}
+#product4{
+    width: 426px;
+    height: 422px;
+    background-image: url('../images/Img 9.jpg');
+}
+#product5{
+    width: 426px;
+    height: 281px;
+    background-image: url('../images/Group\ 8.jpg');
+}
+
+
+.product_img-legend{
+    
+}
+
+.product_img-legend p{
+    font-size: 12px;
+    font-family: 'Red Hat Text', sans-serif;
+    padding: 5px 0;
+}
+/* .producto_img2{
+    grid-row: 7 / 10;
+    grid-column: 2 / 4;
+    background-image: url(../images/img-5.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.product_img-legend2{
+    grid-row: 10 / 11;
+    grid-column: 3 / 5;
+}
+
+.product_img-legend2 p, .product_img-legend3 p, .product_img-legend4 p{
+    font-size: 12px;
+    font-family: 'Red Hat Text', sans-serif;
+    padding: 5px 0;
+}
+.producto_img3{
+    grid-row: 1 / 4;
+    grid-column: 6 / 8;
+    background-image: url(../images/img-5.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+}
+.product_img-legend3{
+    grid-row: 10 / 11;
+    grid-column: 3 / 5;
+}
+
+.producto_img4{
+    rid-row: 6 / 10;
+    grid-column: 3 / 5;
+    background-image: url(../images/img-5.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: 10px;
+    background-repeat: no-repeat;
+}
+.product_img-legend4{
+    grid-row: 10 / 11;
+    grid-column: 3 / 5;
+}
+ */
+
 /* #product.productIn {
     animation-name: productIn, rotateProduct;
     transform: rotate(0deg);

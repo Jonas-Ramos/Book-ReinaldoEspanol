@@ -19,8 +19,8 @@
         display: none;
     }
     .nav_desktop{
-        width: 54%;
-        height: 25px;
+        width: 45px;
+        height: 45px;
         background-color: white;
         position: fixed;
         right: 3%;
@@ -29,7 +29,6 @@
         z-index: 10000000;   
         overflow: hidden;
         transition: 1s cubic-bezier(0.18, 0.89, 0.32, 1.28); 
-        display: none;
     }
     .product_nav_desktop{
         width: 0%;
@@ -84,7 +83,7 @@
     .nav__menu {
         position: relative;
         opacity: 0;
-        display: flex;
+        display: none;
         justify-content: space-between;
         width: 100%;
         height: inherit;
