@@ -14,7 +14,7 @@
 </head>
 <body id="body">
     <!-- <a href="#menu"><span class="nav" id="nav"> </span></a> -->
-    
+   
     <a href="#menu"> <span class="nav_desktop"  id="nav_desktop"; >
         <div class="nav__menu" id="nav_menu">
             <div class="nav__menu__text">
@@ -67,6 +67,7 @@
         </div>
     </section>
     <section id="about" class="vertical-scrolling" data-anchor="apropos">
+        
         <header class="header_fixed" id="headerVue">
             <ul>
                 <li><a class="header_fixed-item" href="#about"">À propos
@@ -77,7 +78,7 @@
                 <li><a class="header_fixed-item" href="#da" >DA</a></li>
                 <li><a class="header_fixed-item" href="#motion">Motion</a></li>
             </ul>
-        </header>
+            </header>
         <div class="about_container">
         <div class="section_title">
               <span class="title" >BOGOTA / COLOMBIA</span>
@@ -284,12 +285,25 @@
           </div>
 
     </section>
+    <!-- <header class="header_fixed" id="headerVue">
+        <ul>
+            <li><a class="header_fixed-item" href="#about"">À propos
+            </a></li>
+            <li><a class="header_fixed-item" href="#product">Design produit</a></li>
+            <li><a class="header_fixed-item" href="#branding";>Branding</a></li>
+            <li><a class="header_fixed-item" href="#web-design">Web design</a></li>
+            <li><a class="header_fixed-item" href="#da" >DA</a></li>
+            <li><a class="header_fixed-item" href="#motion">Motion</a></li>
+        </ul>
+    </header> -->
     <script src="js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
 <script>
+
+
 var app = new Vue({
   el: '#veuprub',
   data: {
@@ -335,6 +349,33 @@ new simpleParallax(down, {
 	transition: 'cubic-bezier(0,0,0,1)',
     maxTransition: 20
 });
+
+
+
+window.onscroll = function(){scrollMove()};
+function scrollMove(){
+    let vista = document.getElementById('nav_desktop');
+    let cabec = document.getElementById('headerVue');
+    if(document.body.scrollTop > 1450 || document.documentElement.scrollTop > 1450){
+        cabec.style.opacity = '1';
+        vista.style.display = 'none';
+} else {
+        cabec.style.opacity = '0'
+        vista.style.display = 'block'
+}
+
+};
+scrollMoves();
+scrollMove();
+// window.onscroll = function(){scrollMoves()};
+/* function scrollMoves(){
+    let vista = document.getElementById('nav_desktop');
+if(document.body.scrollTop > 600 || document.documentElement.scrollTop > 600){
+    vista.style.opacity = '0';
+} else {
+    vista.style.opacity = '1'
+}
+}; */
 
 /* $('#fullPage').fullpage({
     sectionSelector: '.vertical-scrolling',
