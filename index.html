@@ -29,7 +29,7 @@
     
     <div id="fullPage" class="scroll-container">
 
-    <section id="container_hero" class="container_hero" data-anchor="slide1">
+    <section id="container_hero" class="container_hero fade" data-anchor="slide1">
         <div class="hero" id="hero">
             <div class="hero__text">
                 <p class="hero__text-title" style="font-weight: 300;">REINALDO <span style="font-weight: 500;"> ESPANOL</span></p>
@@ -57,7 +57,7 @@
                 <li data-menuanchor="produit"><a class="list_text" href="#product">DESIGN PRODUIT</a></li>
                 <li data-menuanchor="branding"><a class="list_text" href="#branding" ">Branding</a></li>
                 <li data-menuanchor="WebDesign"><a class="list_text" href="#web-design" > Web Design </a></li>
-                <li data-menuanchor="apropos"><a class="list_text" href="#da" >DA</a></li>
+                <li data-menuanchor="apropos"><a class="list_text" href="#A.D" >DA</a></li>
                 <li data-menuanchor="apropos"><a class="list_text" href="#motion">Motion</a></li>
             </ul>
         </div>    
@@ -72,10 +72,10 @@
             <ul>
                 <li><a class="header_fixed-item" href="#about"">À propos
                 </a></li>
-                <li><a class="header_fixed-item" href="#product">Design produit</a></li>
                 <li><a class="header_fixed-item" href="#branding";>Branding</a></li>
+                <li><a class="header_fixed-item" href="#product">Design produit</a></li>
                 <li><a class="header_fixed-item" href="#web-design">Web design</a></li>
-                <li><a class="header_fixed-item" href="#da" >DA</a></li>
+                <li><a class="header_fixed-item" href="#A.D" >DA</a></li>
                 <li><a class="header_fixed-item" href="#motion">Motion</a></li>
             </ul>
             </header>
@@ -273,13 +273,13 @@
             </div>
         </div>
     </section>
-    <section id="art-dir">
+    <section id="A.D">
         <div class="art-dir_container">
             <div class="section_title">
                 <span class="subtitle">ART DIRECTION</span>
             </div> 
             <div class="art-dir_img">
-                <img src="/RES PRUEBAS/images/neme.jpg" alt="">
+                <img class="img-left" src="/RES PRUEBAS/images/neme.jpg" alt="">
                 <!-- EL TEXTO INGRESADO A CONTINUACIÓN FUE MEDIANTE LA LIBRERÍA VUE.JS. FASE EXPERIMENTAL -->
                 <p id="veu-1">{{ message }}
             </div>
@@ -298,17 +298,61 @@
           </div>
 
     </section>
-    <!-- <header class="header_fixed" id="headerVue">
+    <section id="motion">
+        <div class="art-dir_container">
+            <div class="section_title">
+                <span class="subtitle">MOTION</span>
+            </div>
+        </div>
+    </section>
+    <div class="container_dots active">
         <ul>
-            <li><a class="header_fixed-item" href="#about"">À propos
-            </a></li>
-            <li><a class="header_fixed-item" href="#product">Design produit</a></li>
-            <li><a class="header_fixed-item" href="#branding";>Branding</a></li>
-            <li><a class="header_fixed-item" href="#web-design">Web design</a></li>
-            <li><a class="header_fixed-item" href="#da" >DA</a></li>
-            <li><a class="header_fixed-item" href="#motion">Motion</a></li>
+            <li>
+                <a href="#hero" class=" dots-text">
+                    <span></span>
+                    <div>Bienvenue</div>
+                </a>
+            </li>
+            <li>
+                <a href="#branding" class="dots-text">
+                    <span></span>
+                    <div>Branding</div>
+                </a>
+            </li>
+            <li>
+                <a href="#product" class="dots-text">
+                    <span></span>
+                    <div>Design Produit</div>
+                </a>
+            </li>
+            <li>
+                <a href="#web-design" class="dots-text">
+                    <span></span>
+                    <div>Web Design</div>
+                </a>
+            </li>
+            <li>
+                <a href="#A.D" class="dots-text">
+                    <span></span>
+                    <div>À propos</div>
+                </a>
+            </li>
+            <li>
+                <a href="#motion" class="dots-text">
+                    <span></span>
+                    <div>Motion</div>
+                </a>
+            </li>
+
+
+            <!-- <span class="dot"><a href="#about">À propos</a></span>
+            <li class="dot"><a href="#branding";>Branding</a></li>
+            <li class="dot"><a href="#product">Design Produit</a></li>
+            <li class="dot"><a href="#web-design">Web Design</a></li>
+            <li class="dot"><a href="#A.D">Art Director</a></li>
+            <li class="dot"><a href="#motion">Motion</a></li> -->
         </ul>
-    </header> -->
+    </div>
     <script src="js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
