@@ -58,7 +58,7 @@
                 <li data-menuanchor="branding"><a class="list_text" href="#branding" ">Branding</a></li>
                 <li data-menuanchor="produit"><a class="list_text" href="#product">DESIGN PRODUIT</a></li>
                 <li data-menuanchor="WebDesign"><a class="list_text" href="#web-design" > Web Design </a></li>
-                <li data-menuanchor="apropos"><a class="list_text" href="#A.D" >DA</a></li>
+                <li data-menuanchor="apropos"><a class="list_text" href="#ArtDirector" >DA</a></li>
                 <li data-menuanchor="apropos"><a class="list_text" href="#motion">Motion</a></li>
             </ul>
         </div>    
@@ -75,7 +75,7 @@
                 <li><a class="header_fixed-item" href="#branding";>Branding</a></li>
                 <li><a class="header_fixed-item" href="#product">Design produit</a></li>
                 <li><a class="header_fixed-item" href="#web-design">Web design</a></li>
-                <li><a class="header_fixed-item" href="#A.D" >DA</a></li>
+                <li><a class="header_fixed-item" href="#ArtDirector" >DA</a></li>
                 <li><a class="header_fixed-item" href="#motion">Motion</a></li>
             </ul>
             </header>
@@ -273,7 +273,7 @@
             </div>
         </div>
     </section>
-    <section id="A.D" class="vertical-scrolling">
+    <section id="ArtDirector" class="vertical-scrolling">
         <div class="art-dir_container">
             <div class="section_title">
                 <span class="subtitle">ART DIRECTION</span>
@@ -345,7 +345,7 @@
                 </a>
             </li>
             <li>
-                <a href="#A.D" class="dots-text">
+                <a href="#ArtDirector" class="dots-text">
                     <span id="artdirId" class="model-dot"></span>
                     <div>Art Direction</div>
                 </a>
@@ -421,6 +421,55 @@ function scrollMove(){
 
 };
 
+
+/* $(document).ready(function (){
+
+var altura = $("#hero").offset().top;
+var altura2 = $("#about").offset().top;
+var altura3 = $("#branding").offset().top;
+var altura4 = $("#product").offset().top;
+var altura5 = $("#web-design").offset().top;
+var altura6 = $("#ArtDirector").offset().top;
+var altura7 = $("#motion").offset().top;
+
+$(window).scroll(function(){
+
+   if($(window).scrollTop() >= altura + 20) {
+
+  $("#heroId").css({"background-color": "rgba(255, 255, 255, 0.986"});
+}else{
+
+  $("#heroId").css({"background-color": "black"});
+
+}
+
+   if($(window).scrollTop() >= altura2) {
+
+  $("#aboutId").css({"background-color": "black"});
+
+}else{
+
+  $("#aboutId").css({"font-weight": "400"});
+
+}
+
+   });
+   
+   $(".boton1").click(function(){
+
+$("html, body").animate({scrollTop: altura},500);
+
+  });
+   
+   $(".boton2").click(function(){
+
+$("html, body").animate({scrollTop: altura2},500);
+
+  });
+ 
+});
+ */
+
 window.addEventListener("hashchange", () => {
   if (window.location.hash == "#about") {
      document.querySelector("#aboutId").classList.add('active')
@@ -450,7 +499,7 @@ window.addEventListener("hashchange", () => {
     }
 });
 window.addEventListener("hashchange", () => {
-  if (window.location.hash == "#A.D") {
+  if (window.location.hash == "#ArtDirector") {
      document.querySelector("#artdirId").classList.add('active')
   } else {
       document.querySelector("#artdirId").classList.remove('active')
