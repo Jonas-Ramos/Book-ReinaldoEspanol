@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTFOLIO R.E.</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/stylesresponsive.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
     <link href="https://fonts.googleapis.com/css?family=Red+Hat+Text&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
@@ -345,13 +346,13 @@
             </li>
             <li>
                 <a href="#A.D" class="dots-text">
-                    <span id="artdir" class="model-dot"></span>
+                    <span id="artdirId" class="model-dot"></span>
                     <div>Art Direction</div>
                 </a>
             </li>
             <li>
                 <a href="#motion" class="dots-text">
-                    <span id="motion" class="model-dot"></span>
+                    <span id="motionId" class="model-dot"></span>
                     <div>Motion</div>
                 </a>
             </li>
@@ -419,6 +420,95 @@ function scrollMove(){
 }
 
 };
+
+window.addEventListener("hashchange", () => {
+  if (window.location.hash == "#about") {
+     document.querySelector("#aboutId").classList.add('active')
+  } else {
+      document.querySelector("#aboutId").classList.remove('active')
+    }
+});
+window.addEventListener("hashchange", () => {
+  if (window.location.hash == "#branding") {
+     document.querySelector("#brandingId").classList.add('active')
+  } else {
+      document.querySelector("#brandingId").classList.remove('active')
+    }
+});
+window.addEventListener("hashchange", () => {
+  if (window.location.hash == "#hero") {
+     document.querySelector("#heroId").classList.add('active')
+  } else {
+      document.querySelector("#heroId").classList.remove('active')
+    }
+});
+window.addEventListener("hashchange", () => {
+  if (window.location.hash == "#web-design") {
+     document.querySelector("#webDesignId").classList.add('active')
+  } else {
+      document.querySelector("#webDesignId").classList.remove('active')
+    }
+});
+window.addEventListener("hashchange", () => {
+  if (window.location.hash == "#A.D") {
+     document.querySelector("#artdirId").classList.add('active')
+  } else {
+      document.querySelector("#artdirId").classList.remove('active')
+    }
+});
+window.addEventListener("hashchange", () => {
+  if (window.location.hash == "#product") {
+     document.querySelector("#productId").classList.add('active')
+  } else {
+      document.querySelector("#productId").classList.remove('active')
+    }
+});
+window.addEventListener("hashchange", () => {
+  if (window.location.hash == "#motion") {
+     document.querySelector("#motionId").classList.add('active')
+  } else {
+      document.querySelector("#motionId").classList.remove('active')
+    }
+});
+
+
+window.addEventListener('hashchange', destacarElement);
+let hashUrl = location.hash;
+function destacarElement(e){
+
+} 
+
+
+
+
+
+/* var hash = window.location.hash.substr(1); 
+if(hash != false) { 
+$('.container_dots span').removeClass('active'); 
+$('.container_dots span[href*="'+hash+'"]').addClass('active');
+} */
+
+
+
+/* $(window).bind('hashchange', function(){ let url = document.location.hash;
+let id = document.getElementsByClassName('model-dot')
+id = [];
+let heroId = document.getElementById('heroId')
+let aboutId = document.getElementById('aboutId')
+let brandingId = document.getElementById('brandingId')
+let webDesignId = document.getElementById('webDesignId')
+let artdir = document.getElementById('artdir')
+let motion = document.getElementById('motion')
+
+switch (url) {
+    case ('#hero'):
+        heroId.classList.add('active')
+        break;
+    case ('#about'):
+        aboutId.classList.add('active')
+        break;
+        default:
+        heroId.classList.remove('active') }); */
 
 /* let url = document.location.hash;
 let id = document.getElementsByClassName('model-dot')
