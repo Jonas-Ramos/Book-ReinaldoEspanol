@@ -138,9 +138,9 @@ section:nth-child(2n){
 
 .hero__description{
     width: 100vw;
-    height: 40vh;
+    height: 27vh;
     position: relative;
-    bottom: 4%;
+    /* bottom: 4%; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -157,6 +157,7 @@ section:nth-child(2n){
 .hero__description p{
     font-family: 'Red Hat Text', sans-serif;
     font-size: 16px;
+    padding: 0 15em;
 }
 
 /* .hero.moveHero{
@@ -194,7 +195,7 @@ section:nth-child(2n){
     justify-content: center;
     align-items: center;
     z-index: 1;
-    margin-top: -2em;
+    /* margin-top: -2em; */
 }
 
 .arrow {
@@ -475,11 +476,11 @@ section:nth-child(2n){
     width: 100%;
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 10% repeat(5, 1fr);
     grid-template-rows: repeat(6, 1fr);
     /* column-gap: 5px; */
     font-family: 'Red Hat Text', sans-serif;
-    column-gap: 1em;
+    /* column-gap: 1em; */
     position: relative;
 }
 
@@ -534,6 +535,7 @@ section:nth-child(2n){
     grid-row: 4 / 6;
     grid-column: 3 / 4;
     place-self: flex-end;
+    padding: 0 1em;
 }
 .text-center p {
     padding: 10px 0;
@@ -541,11 +543,12 @@ section:nth-child(2n){
     font-size: 12px;
 }
 .about_skills{
-        grid-row: 2 / 6;
+    grid-row: 2 / 6;
     grid-column: 4 / 6;
     justify-content: space-around;
     display: flex;
     flex-direction: column;
+    padding: 0 1em;
 }
 .about_skills-item{
     /* padding-bottom: 3em; */
@@ -654,7 +657,7 @@ section:nth-child(2n){
 }
 .art-dir_container{
     display: grid;
-    grid-template-columns: 200px 300px 1fr 200px;
+    grid-template-columns: 10% 300px 1fr 200px;
     grid-template-rows: repeat(2, 1fr);
 }
 
