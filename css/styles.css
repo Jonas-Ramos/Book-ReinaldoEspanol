@@ -197,7 +197,7 @@ section:nth-child(2n){
     justify-content: center;
     align-items: center;
     z-index: 1;
-    /* margin-top: -2em; */
+    margin-bottom: 2em;
 }
 
 .arrow {
@@ -495,6 +495,7 @@ section:nth-child(2n){
     grid-column: 1 span;
     place-self: center;
     transform: rotateZ(-90deg);
+    z-index: 100;
 }
 /* .about_title .title{
     display: inline-block;
@@ -520,6 +521,15 @@ section:nth-child(2n){
     width: 10px;
 }
 
+.about_skills-social span img {
+    width: 25px;
+    height: 25px;
+    margin: 0 .2em 0 0;
+}
+
+.about_skills-item p span{
+    font-style: italic;
+}
 .section_title .title{
     font-family: 'Roboto', sans-serif;
     font-size: 18px;

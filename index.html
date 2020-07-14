@@ -18,7 +18,7 @@
     <a href="#menu"> <span class="nav_desktop"  id="nav_movil"; ></span></a>    
     <div id="fullPage" class="scroll-container">
 
-    <section id="hero" class="container_hero vertical-scrolling fade" data-anchor="slide1">
+    <section id="hero" class="container_hero  fade" data-anchor="slide1">
         <div class="hero">
             <div class="hero__text">
                 <p class="hero__text-title inline-photo show-on-scroll">REINALDO ESPANOL</p>
@@ -40,7 +40,7 @@
         </div>
     </section>
 
-    <section class="menu vertical-scrolling" id="menu" data-anchor="slide2">
+    <section class="menu " id="menu" data-anchor="slide2">
         <div class="submenu menu inline-photo show-on-scroll" id="submenu"> 
             <ul class="list" id="list">
                 <li data-menuanchor="apropos"><a class="list_text" href="#about">À PROPOS</a></li>
@@ -52,11 +52,11 @@
             </ul>
         </div>    
         <div class="translate inline-photo show-on-scroll" id="translate">
-            <h2>FR</h2>
+            <h2 style="border-right: 2px solid black;">FR</h2>
             <h2>ES</h2>
         </div>
     </section>
-    <section id="about" class="vertical-scrolling" data-anchor="apropos">
+    <section id="about" class="" data-anchor="apropos">
         
         <header class="header_fixed" id="headerVue">
             <ul>
@@ -73,8 +73,8 @@
               <span class="title inline-photo show-on-scroll" >BOGOTA / COLOMBIA</span>
               <span class="subtitle inline-photo show-on-scroll">REINALDO ESPANOL</span>
           </div>
-        <div class="section_title inline-photo show-on-scroll" id="about_title-movil">
-              <span class="title" >À PROPOS</span>
+        <div class="section_title" id="about_title-movil">
+              <span class="title inline-photo show-on-scroll" >À PROPOS</span>
           </div>
           <div class="about_img inline-photo show-on-scroll">
             <img class="" src="images/foto.jpg" alt="">
@@ -90,24 +90,31 @@
           </div>
           <div class="about_skills ">
               <div class="about_skills-item inline-photo show-on-scroll">
-                  <p>Prix design</p>
-                  <p>Riva 1920, Light up your idea /Mobilier Design / 2014 Milan, Italie
-                    Défi Aluminnov  / Éco-design / 2014 Paris, France
-                    Toyota Logistic Design Competition  / Design transport / 2014 Hanovrer, Allemagne
-                    International train design competition / Design transport / 2014  Qingdao, Chine
-                    Concours Design et industrie du futur  / Éco-design / 2014 Saint-Étienne, France
-                    Challenge Accessibilité avec Alstom   / Design Inclusif / 2014 Lyon, France
+                  <p>Prix du Design</p>
+                
+                  <p>Riva 1920, Light up your idea <span>/Mobilier Design / 2014 Milan, Italie</span><br>
+                    Défi Aluminnov <span> / Éco-design / 2014 Paris, France</span><br>
+                    Toyota Logistic Design Competition <span> / Design transport / 2014 Hanovrer, Allemagne</span><br>
+                    International train design competition <span> / Design transport / 2014  Qingdao, Chine</span><br>
+                    Concours Design et industrie du futur <span> / Éco-design / 2014 Saint-Étienne, France </span><br>
+                    Challenge Accessibilité avec Alstom  <span> / Design Inclusif / 2014 Lyon, France</span>
                     </p>
             </div>
               <div class="about_skills-item inline-photo show-on-scroll">
-                  <p>Expositions</p>
-                  <p>Lorem Ipsum is simply dummy </p>
+                  <p>Salons et Expositions
+                  Salone del Mobile <span>/ 2014 Milan, Italie</span><br>
+                  IPCPR 2018 <span>/ Las Vegas, Usa</span><br>
+                  Eurofestival Harley Davidson <span>/ Grimaud, France</span><br>
+                </p>
                 </div>
                 <div class="about_langues inline-photo show-on-scroll">
-                    <p>Langues <br>Français
-                        <br>Anglais
-                        <br>Espagnol
-                         </p>
+                    <p>Langues
+                    <br>
+                    <br>
+                    Français
+                    <br>Anglais
+                    <br>Espagnol</p>
+                         
                   </div>
               <div class="about_skills-social inline-photo show-on-scroll">
                   <span><img src="https://img.icons8.com/material-outlined/24/000000/instagram-new.png"/></span>
@@ -118,7 +125,7 @@
         
     </section>
 
-    <section id="branding" class="vertical-scrolling" data-anchor="slide4">
+    <section id="branding" class="" data-anchor="slide4">
         
         <div class="product_container">
             <div class="section_title">
@@ -186,7 +193,7 @@
     </section>
 
 
-    <section id="product" class="vertical-scrolling" data-anchor="slide3">
+    <section id="product" class="" data-anchor="slide3">
         <div class="product_container">
             <div class="section_title">
                 <span class="subtitle">DESIGN PRODUIT</span>
@@ -240,7 +247,7 @@
             </div>
         </div>
     </section>
-    <section id="web-design" class="vertical-scrolling">
+    <section id="web-design" class="">
         <div class="web-design_container inline-photo show-on-scroll">
             <div class="section_title">
                 <span class="subtitle">WEB DESIGN</span>
@@ -278,7 +285,7 @@
             </div>
         </div>
     </section>
-    <section id="ArtDirector" class="vertical-scrolling">
+    <section id="ArtDirector" class="">
         <div class="art-dir_container">
             <div class="section_title">
                 <span class="subtitle inline-photo show-on-scroll">ART DIRECTION</span>
@@ -303,7 +310,7 @@
           </div>
 
     </section>
-    <section id="motion" class="vertical-scrolling">
+    <section id="motion" class="">
         <div class="web-design_container">
             <div class="section_title">
                 <span class="subtitle inline-photo show-on-scroll">MOTION</span>
@@ -791,7 +798,7 @@ if(document.body.scrollTop > 600 || document.documentElement.scrollTop > 600){
     scrollBar: false,
     continuousVertical: false,
     parallax: true,
-    sectionSelector: '.vertical-scrolling',
+    sectionSelector: '.',
     // slideSelector: '.horizontal-scrolling',
     controlArrows: true,
     controlArrowColor: '#c70101',
