@@ -69,7 +69,7 @@ section{
 }
 section:nth-child(2n){
     /* background-color: red; */
-    padding: 50px 0;
+    /* padding: 50px 0; */
 
 }
 
@@ -299,6 +299,8 @@ section:nth-child(2n){
     transition: 1s cubic-bezier(0.18, 0.89, 0.32, 1.28); 
 }
 
+#nav_movil{display: none;}
+
 
 .translate{
     /* display: none; */
@@ -512,6 +514,7 @@ section:nth-child(2n){
     grid-row: 6 / 7;
     grid-column: 2 / 3;
     margin-top: 10px;
+    place-self: center left;
 }
 .about_img_text img{
     width: 10px;
@@ -637,7 +640,13 @@ section:nth-child(2n){
     background-image: url('../images/Group\ 8.jpg');
 } */
 
-.product_img-legend p, .column-b span, .column-b p, .art-dir_img p, .column-c p, .column-c span{
+.art-dir_img p{
+    font-size: 12px;
+    font-family: 'Red Hat Text', sans-serif;
+    padding: 5px 0;
+}
+
+.product_img-legend p, .column-b span, .column-b p, .column-c p, .column-c span{
     font-size: 12px;
     font-family: 'Red Hat Text', sans-serif;
     padding: 5px 0;
