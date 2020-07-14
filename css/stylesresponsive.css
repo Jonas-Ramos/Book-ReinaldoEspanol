@@ -92,7 +92,7 @@ header {visibility: hidden;}
     display: flex;
     flex-direction: column;
 }
-.product_container .section_title, #web-design .section_title{
+.product_container .section_title, #web-design .section_title, #motion .section_title, #ArtDirector .section_title{
     transform: rotateZ(0deg);
 }
 #product3, #product4, #product7, #product9{display: none;}
@@ -106,7 +106,7 @@ header {visibility: hidden;}
 .product_img-legend p, .column-b span, .column-b p, .column-c p, .column-c span {
     padding: 5px 2em;
 }
-#branding .section_title, #product .section_title, #web-design .section_title{
+#branding .section_title, #product .section_title, #web-design .section_title, #motion .section_title, #ArtDirector .section_title{
         background-color: white;
         width: 100vw;
         height: 114px;
@@ -115,17 +115,21 @@ header {visibility: hidden;}
         align-items: center;
         position: sticky;
         top: 0;
+        z-index: 1000;
 }
 
-.web-design_container {
+.web-design_container, .art-dir_container {
     display: flex;
     flex-direction: column;
 }
 
-#webImgDesk-1, #webImgDesk-2, #webImgDesk-3{
-    display: none;
+.art-dir_img{
+    padding: 0;
 }
-#webImgMovil-1, #webImgMovil-2 {display: block;}
+
+.art-dir_img p {
+    padding: 5px 2em;
+}
 
 .hero__text {
     left: 1em;
@@ -145,6 +149,12 @@ header {visibility: hidden;}
     }
 
 @media screen and (max-width: 426px) {
-    
+    #webImgDesk-1, #webImgDesk-2, #webImgDesk-3{
+        display: none;
+    }
+    #webImgMovil-1, #webImgMovil-2 {display: block;}
+    #footer p{
+        font-size: 11px;
+    }
 
 }
