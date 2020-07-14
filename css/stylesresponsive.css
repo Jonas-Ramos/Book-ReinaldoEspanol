@@ -117,6 +117,9 @@ header {visibility: hidden;}
         top: 0;
         z-index: 1000;
 }
+#motion .section_title{
+    position: relative;
+}
 
 .web-design_container, .art-dir_container {
     display: flex;
@@ -155,6 +158,9 @@ header {visibility: hidden;}
     #webImgMovil-1, #webImgMovil-2 {display: block;}
     #footer p{
         font-size: 11px;
+    }
+    #motion{
+        height: 100vh;
     }
 
 }
