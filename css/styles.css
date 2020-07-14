@@ -311,7 +311,7 @@ section:nth-child(2n){
     position: fixed;
     right: 5%;
     top: 5%;
-    /* cursor: pointer; */
+    visibility: visible;
     z-index: 10000000;   
     overflow: hidden;
     transition: 1s cubic-bezier(0.18, 0.89, 0.32, 1.28); 
@@ -486,6 +486,8 @@ section:nth-child(2n){
     position: relative;
 }
 
+#about_title-movil{display: none;}
+
 .section_title{
     grid-row: 1 / 7;
     grid-column: 1 span;
@@ -499,6 +501,7 @@ section:nth-child(2n){
 .about_img{
     grid-row: 2 / 6;
     grid-column: 2 / 3;
+    place-self: end;
     /* background-image: url(../images/foto.jpg);
     background-attachment: local;
     background-repeat: no-repeat;
@@ -573,7 +576,7 @@ section:nth-child(2n){
     /* column-gap: .5em; */
     justify-content: center;
     align-items: center;
-    /* column-gap: 50px; */
+    column-gap: 15px;
 
 }
 
@@ -649,11 +652,11 @@ section:nth-child(2n){
     grid-column: 2 / 4;
     padding: 5px 0;
 }
-.column-b img{
+.product_img img{
     width: 100%;
     height: 100%;
 }
-.column-b iframe{
+.column-b img{
     width: 100%;
     height: 720px;
 }
@@ -678,6 +681,15 @@ section:nth-child(2n){
     width: 100%;
     height: auto;
 }
+
+
+.youtube-player {position: relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;background:#000;margin:8px 0 8px 0;}
+.youtube-player iframe {position:absolute;top: 0;left:0;width:100%;height:100%;z-index:100;background: transparent;}
+.youtube-player img {bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top: 0;border:none;height:auto;cursor:pointer;-webkit-transition: .4s all;-moz-transition: .4s all;transition: .4s all;}
+.youtube-player img:hover {-webkit-filter:brightness(75%);}
+.youtube-player .play {height:72px;width:72px;left:50%;top:50%;margin-left:-36px;margin-top:-36px;position:absolute;background: url("//i.imgur.com/TxzC70f.png") no-repeat;}
+
+
 
 /* .producto_img2{
     grid-row: 7 / 10;
