@@ -103,7 +103,7 @@ header {visibility: hidden;}
 .column-a {
     padding-right: 0;
 }
-.product_img-legend p, .column-b span, .column-b p, .column-c p, .column-c span {
+.product_img-legend p, .column-b p, .column-c p {
     padding: 5px 2em;
 }
 #branding .section_title, #product .section_title, #web-design .section_title, #motion .section_title, #ArtDirector .section_title{
