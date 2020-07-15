@@ -573,6 +573,7 @@ section:nth-child(2n){
 }
 .about_skills p{
     font-size: 12px;
+    padding: .5em 0;
 }
 .about_langues{
     grid-row: 2 / 3;
@@ -652,13 +653,18 @@ section:nth-child(2n){
 .art-dir_img p{
     font-size: 12px;
     font-family: 'Red Hat Text', sans-serif;
-    padding: 5px 0;
+    padding: 5px 2em;
 }
-
 .product_img-legend p, .column-b span, .column-b p, .column-c p, .column-c span{
     font-size: 12px;
     font-family: 'Red Hat Text', sans-serif;
     padding: 5px 0;
+}
+.legend-title{
+    font-size: 14px!important;
+}
+.legend-italicText{
+    font-style: italic;
 }
 .web-design_container{
     width: 100vw;
@@ -667,6 +673,8 @@ section:nth-child(2n){
     padding: 0 0 2em 0;
 }
 #webImgMovil-1, #webImgMovil-2{display: none;}
+
+
 
 .column-b{
     grid-column: 2 / 4;
@@ -684,6 +692,16 @@ section:nth-child(2n){
     display: grid;
     grid-template-columns: 10% 25% 1fr 10%;
     grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 'title img1 img2 space';
+    
+}
+.img1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: blue;
+}
+#neme{
+    padding: 2em;
 }
 
 .art-dir_img{

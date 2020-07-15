@@ -134,6 +134,10 @@ header {visibility: hidden;}
     padding: 5px 2em;
 }
 
+#neme{
+    padding: 0em;
+}
+
 .hero__text {
     left: 1em;
 }
