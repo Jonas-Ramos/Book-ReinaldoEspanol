@@ -307,8 +307,8 @@ section:nth-child(2n){
 }
 .nav_desktop{
     opacity: 1;
-    width: 45px;
-    height: 45px;
+    width: 53px;
+    height: 52px;
     background-color: white;
     position: fixed;
     right: 5%;
@@ -317,7 +317,40 @@ section:nth-child(2n){
     z-index: 10000000;   
     overflow: hidden;
     transition: 1s cubic-bezier(0.18, 0.89, 0.32, 1.28); 
+    text-align: center;
 }
+
+/* TEXTO DENTRO DEL CUADRO MENU, APARECE CON EL HOVER */
+.nav-menu{
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Red Hat Text', sans-serif;
+    color: rgba(0,0,0,.51);
+    transition: 1s cubic-bezier(0.18, 0.89, 0.32, 1.28); 
+}
+.nav-menu-tr{
+    width: 100%;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: 'Red Hat Text', sans-serif;
+    color: rgba(0, 0, 0, 0.51);
+    transition: .5s cubic-bezier(0.18, 0.89, 0.32, 1.28); 
+}
+.nav-translate-container{
+    display: flex;
+    justify-content: space-around;
+    transition: .5s cubic-bezier(0.18, 0.89, 0.32, 1.28); 
+}
+
+.nav-menu, .nav-translate-container{
+    opacity: 0;
+}
+
+.nav_desktop:hover > span, .nav_desktop:hover > p {
+    opacity: 1;
+}
+
+/* FIN TEXTO DENTRO DE CUADRO MENU */
 
 .nav__menu {
     position: relative;
