@@ -53,7 +53,7 @@ header {visibility: hidden;}
 #nav_movil{display: block;}
 #hero_subtitle-movil{display:block}    
 #hero_subtitle-desk{display:none}   
-.container_dots{display: none;}
+.container_dots{display: none; visibility: hidden;}
 header {visibility: hidden;}
 
 

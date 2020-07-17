@@ -632,7 +632,7 @@ section:nth-child(2n){
     /* grid-template-rows: repeat(1, 1fr); */
     /* font-family: 'Red Hat Text', sans-serif; */
     /* column-gap: .5em; */
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     column-gap: 15px;
 
@@ -644,12 +644,12 @@ section:nth-child(2n){
     padding-right: .5em;
 }
 
-.product_container .section_title {
+/* .product_container .section_title {
     grid-row: 1 / 10;
     grid-column: 1 span;
     place-self: center;
     transform: rotateZ(-90deg);
-}
+} */
 
 .product-card {
     padding-bottom: 1.5em;
