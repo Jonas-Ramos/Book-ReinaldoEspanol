@@ -341,7 +341,7 @@
         <ul>
             <li>
                 <a href="#hero" class="dots-text">
-                    <span id="heroId" class="model-dot"></span>
+                    <span id="heroId" class="model-dot active"></span>
                     <!-- <div>Bienvenue</div> -->
                 </a>
             </li>
@@ -378,6 +378,55 @@
             <li>
                 <a href="#motion" class="dots-text">
                     <span id="motionId" class="model-dot"></span>
+                    <!-- <div>Motion</div> -->
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <div class="container_dots2" id="container_dots-2">
+        <ul>
+            <li>
+                <a href="#hero" class="dots-text">
+                    <span id="heroId2" class="model-dot2"></span>
+                    <!-- <div>Bienvenue</div> -->
+                </a>
+            </li>
+            <li>
+                <a href="#about" class="dots-text">
+                    <span id="aboutId2" class="model-dot2"></span>
+                    <!-- <div>À propos</div> -->
+                </a>
+            </li>
+            <li>
+                <a href="#branding" class="dots-text">
+                    <span id="brandingId2" class="model-dot2"></span>
+                    <!-- <div>Branding</div> -->
+                </a>
+            </li>
+            <li>
+                <a href="#product" class="dots-text">
+                    <span id="productId2" class="model-dot2"></span>
+                    <!-- <div>Design Produit</div> -->
+                </a>
+            </li>
+            <li>
+                <a href="#web-design" class="dots-text">
+                    <span id="webDesignId2" class="model-dot2"></span>
+                    <!-- <div>Web Design</div> -->
+                </a>
+            </li>
+            <li>
+                <a href="#ArtDirector" class="dots-text">
+                    <span id="artdirId2" class="model-dot2"></span>
+                    <!-- <div>Art Direction</div> -->
+                </a>
+            </li>
+            <li>
+                <a href="#motion" class="dots-text">
+                    <span id="motionId2" class="model-dot2"></span>
                     <!-- <div>Motion</div> -->
                 </a>
             </li>
@@ -496,15 +545,22 @@ function scrollMove(){
     let vista = document.getElementById('nav_desktop');
     let cabec = document.getElementById('headerVue');
     let menuColor = document.getElementById('nav_movil')
+    let dotBackG = document.getElementById('container_dots')
+    let dotBackG2 = document.getElementById('container_dots-2')
     if(aboutSection.scrollTop > 0 || document.documentElement.scrollTop > 0){
         cabec.style.opacity = '1';
         vista.style.visibility = 'hidden';
         menuColor.style.backgroundColor = "black";
+        dotBackG.style.display = "none";
+        dotBackG2.style.display = "flex";
+
 
 } else {
         cabec.style.opacity = '0'
         vista.style.visibility = 'visible'
         menuColor.style.backgroundColor = "white";
+        dotBackG.style.display = "flex";
+        dotBackG2.style.display = "none";
 
 }
 
@@ -513,61 +569,76 @@ function scrollMove(){
 window.addEventListener("hashchange", () => {
   if (window.location.hash == "#about") {
      document.querySelector("#aboutId").classList.add('active')
+     document.querySelector("#aboutId2").classList.add('active2')
      document.querySelector("#aboutIdMen").classList.add('activeMenu')
+    //  document.querySelector("#heroId").classList.remove('activeMenu')
   } else {
       document.querySelector("#aboutId").classList.remove('active')
+      document.querySelector("#aboutId2").classList.remove('active2')
       document.querySelector("#aboutIdMen").classList.remove('activeMenu')
     }
 });
 window.addEventListener("hashchange", () => {
   if (window.location.hash == "#branding") {
      document.querySelector("#brandingId").classList.add('active')
+     document.querySelector("#brandingId2").classList.add('active2')
      document.querySelector("#brandingIdMen").classList.add('activeMenu')
   } else {
       document.querySelector("#brandingId").classList.remove('active')
+      document.querySelector("#brandingId2").classList.remove('active2')
       document.querySelector("#brandingIdMen").classList.remove('activeMenu')
     }
 });
 window.addEventListener("hashchange", () => {
   if (window.location.hash == "#hero") {
      document.querySelector("#heroId").classList.add('active')
+    //  document.querySelector("#heroId2").classList.add('active')
   } else {
       document.querySelector("#heroId").classList.remove('active')
+    //   document.querySelector("#heroId2").classList.remove('active2')
     }
 });
 window.addEventListener("hashchange", () => {
   if (window.location.hash == "#web-design") {
      document.querySelector("#webDesignId").classList.add('active')
+     document.querySelector("#webDesignId2").classList.add('active2')
      document.querySelector("#webDesignIdMen").classList.add('activeMenu')
   } else {
       document.querySelector("#webDesignId").classList.remove('active')
+      document.querySelector("#webDesignId2").classList.remove('active2')
       document.querySelector("#webDesignIdMen").classList.remove('activeMenu')
     }
 });
 window.addEventListener("hashchange", () => {
   if (window.location.hash == "#ArtDirector") {
      document.querySelector("#artdirId").classList.add('active')
+     document.querySelector("#artdirId2").classList.add('active2')
      document.querySelector("#artdirIdMen").classList.add('activeMenu')
   } else {
       document.querySelector("#artdirId").classList.remove('active')
+      document.querySelector("#artdirId2").classList.remove('active2')
       document.querySelector("#artdirIdMen").classList.remove('activeMenu')
     }
 });
 window.addEventListener("hashchange", () => {
   if (window.location.hash == "#product") {
      document.querySelector("#productId").classList.add('active')
+     document.querySelector("#productId2").classList.add('active2')
      document.querySelector("#productIdMen").classList.add('activeMenu')
   } else {
       document.querySelector("#productId").classList.remove('active')
+      document.querySelector("#productId2").classList.remove('active2')
       document.querySelector("#productIdMen").classList.remove('activeMenu')
     }
 });
 window.addEventListener("hashchange", () => {
   if (window.location.hash == "#motion") {
      document.querySelector("#motionId").classList.add('active')
+     document.querySelector("#motionId2").classList.add('active2')
      document.querySelector("#motionIdMen").classList.add('activeMenu')
   } else {
       document.querySelector("#motionId").classList.remove('active')
+      document.querySelector("#motionId2").classList.remove('active2')
       document.querySelector("#motionIdMen").classList.remove('activeMenu')
     }
 });
