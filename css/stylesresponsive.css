@@ -49,6 +49,8 @@ header {visibility: hidden;}
 .hero__description{
     height: 35vh;
 }
+#arrowMenu{display: none;}
+#arrowAbout{display: none;}
 #nav_desktop{opacity: 0;}
 #nav_movil{display: block;}
 #hero_subtitle-movil{display:block}    
@@ -151,6 +153,9 @@ header {visibility: hidden;}
 }
 .section_title .subtitle{
     margin-left: 1em;
+}
+.hero__text-center {
+    font-size: 22px;
 }
 
 
