@@ -22,7 +22,8 @@
         </p>
     </span>
         </a>
-    <a href="#menu"> <span class="nav_desktop"  id="nav_movil";></span></a>    
+    <a href="#menu"> <span class="nav_desktop"  id="nav_movil";></span></a>   
+
     <div id="fullPage" class="scroll-container">
 
     <section id="hero" class="container_hero  fade" data-anchor="slide1">
@@ -321,13 +322,13 @@
             </div>
             <div class="column-c inline-photo show-on-scroll">
                 <img class="img-down" src="images/asset-1.jpg" alt="">
-                <p class="legend-title">Cristal & Bronze web site I Paris, France</p>
+                <p class="legend-title">Cristal & Bronze web site | <span class="legend-italicText"> Paris, France</span></p>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                 </p>
             </div>
             <div class="column-c inline-photo show-on-scroll">
                 <img class="img-up" src="images/Img-9.jpg" alt="">
-                <p class="legend-title">Cristal & Bronze web site I Paris, France</p>
+                <p class="legend-title">Cristal & Bronze web site | <span class="legend-italicText"> Paris, France</span></p>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                 </p>
             </div>
@@ -342,7 +343,7 @@
             <div class="column-b inline-photo show-on-scroll" >
                 <!-- <video class="" src="" alt=""> -->
                     <div class="youtube-player" data-id="KRhyb2RRRb8"></div>
-                    <p class="legend-title">Cristal & Bronze web site I Paris, France</p>
+                    <p class="legend-title">Cristal & Bronze web site | <span class="legend-italicText">Paris, France</span></p>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
                 </p>
             </div>
@@ -462,6 +463,48 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js"></script>
 <script>
+
+/* WAYPOINTS */
+$(function(){
+  // div con el contenido
+  var $content = $('#fullPage');
+  // barra de navegación
+  var $nav = $('#headerVue');
+  
+  // secciones
+  var secciones = [
+    { menu: $('#hero'), content: $('#hero') },
+    { menu: $('#aboutIdMen'), content: $('#about') },
+    { menu: $('#brandingIdMen'), content: $('#branding') },
+    { menu: $('#productIdMen'), content: $('#product') },
+    { menu: $('#webDesignIdMen'), content: $('#web-design')},
+    { menu: $('#artdirIdMen'), content: $('#ArtDirector')},
+    { menu: $('#motionIdMen'), content: $('#motion')}
+  ];
+  
+  
+  // Al hacer scroll
+  $content.scroll(function(){
+    // Quitamos la clase de todas las opciones de menu
+    $nav.find('ul li a').removeClass('activeMenu');
+    // Recorremos las secciones de abajo a arriba
+    // Activamos la primera cuya posición sea 40 o menor (ha llegado a la parte superior)
+    // Le damos un margen de 40 para que no sea necesario que llegue hasta el borde
+    for (var i=secciones.length -1; i >= 0; i--){
+      // Posición superior de la sección
+      var top = secciones[i].content.offset().top;
+      // Si ha llegado arriba activamos el menú y salimos
+      if (top <= 0){
+        secciones[i].menu.addClass('activeMenu');
+        return;
+      }
+    }
+    // Si no ha llegado ninguna arriba activamos la intro
+    // $('#hero').addClass('activeMenu');
+  });
+});
+
+/* END WAYPOINTS */
 
 
 
