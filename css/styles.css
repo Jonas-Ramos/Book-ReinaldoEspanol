@@ -66,6 +66,7 @@ section{
     width: 100vw;
     height: auto;
     /* border-bottom: 2px solid rgb(243, 243, 243); */
+    padding-bottom: 6em;
 }
 section:nth-child(2n){
     /* background-color: red; */
@@ -548,7 +549,7 @@ section:nth-child(2n){
     justify-self: center;
     width: auto;
     position: sticky;
-    top: 15em;
+    top: 12em;
     margin-top: 15em;
 }
 .section_title span{
@@ -1267,7 +1268,7 @@ section:nth-child(2n){
 }
 
 .container_dots{
-    width: 160px;
+    width: 10%;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -1279,7 +1280,7 @@ section:nth-child(2n){
     overflow: hidden;
 }
 .container_dots2{
-    width: 160px;
+    width: 10%;
     height: 100vh;
     display: none;
     align-items: center;

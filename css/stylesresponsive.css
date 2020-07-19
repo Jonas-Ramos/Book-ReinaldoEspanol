@@ -66,6 +66,7 @@ header {visibility: hidden;}
     align-items: center;
     flex-direction: column;
     padding: 0 3em 1em 3em;
+    overflow: hidden;
 }
 #about_title-desk{display: none;}
 #about_title-movil{
@@ -97,6 +98,10 @@ header {visibility: hidden;}
 }
 .product_container .section_title, #web-design .section_title, #motion .section_title, #ArtDirector .section_title{
     transform: rotateZ(0deg);
+    
+}
+.section_title{
+    margin-top: 0;
 }
 #product3, #product4, #product7, #product9{display: none;}
 
@@ -119,6 +124,7 @@ header {visibility: hidden;}
         position: sticky;
         top: 0;
         z-index: 1000;
+        margin-top: 0em;
 }
 #motion .section_title{
     position: relative;
